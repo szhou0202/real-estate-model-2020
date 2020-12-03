@@ -26,8 +26,7 @@ print('Int: ', reg.intercept_)
 print('Coef: ', reg.coef_)
 
 # with statsmodels
-X = sm.add_constant(X)
-
+X = sm.add_constant(X) # not sure what add_constant does but apparently is important to accuracy of model
 model = sm.OLS(Y,X).fit()
 predictions = model.predict(X)
 
